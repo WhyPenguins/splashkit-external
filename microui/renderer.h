@@ -2,7 +2,9 @@
 #define RENDERER_H
 
 #include "microui.h"
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 void r_init(void);
 void r_draw_rect(mu_Rect rect, mu_Color color);
 void r_draw_text(const char *text, mu_Vec2 pos, mu_Color color);
@@ -12,6 +14,8 @@ void r_draw_icon(int id, mu_Rect rect, mu_Color color);
 void r_set_clip_rect(mu_Rect rect);
 void r_clear(mu_Color color);
 void r_present(void);
-
+#ifdef __cplusplus
+}
+#endif
 #endif
 
